@@ -1,0 +1,517 @@
+Program 1: Visiting Card
+--------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPANY NAME"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            android:id="@+id/lbl_company_name"
+            android:layout_marginRight="10dp"
+            />
+        
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo"
+            android:layout_toRightOf="@id/lbl_company_name"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JobTitle:"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PhoneNumber:"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email, Website, Fax"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        />
+</LinearLayout>
+
+
+Program 2: Calci
+------------------
+package com.example.calci;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    double in1 = 0, i2 = 0;
+    TextView edittext1;
+    boolean Add, Sub, Multiply, Divide, Remainder, deci;
+    Button button_0, button_1, button_2, button_3, button_4,
+    button_5, button_6, button_7, button_8, button_9, button_Add,
+    button_Sub, button_Mul, button_Div, button_Equ, button_Del,
+    button_Dot, button_Remainder;
+        @Override
+    protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            button_0 = (Button) findViewById(R.id.b0);
+            button_1 = (Button) findViewById(R.id.b1);
+            button_2 = (Button) findViewById(R.id.b2);
+            button_3 = (Button) findViewById(R.id.b3);
+            button_4 = (Button) findViewById(R.id.b4);
+            button_5 = (Button) findViewById(R.id.b5);
+            button_6 = (Button) findViewById(R.id.b6);
+            button_7 = (Button) findViewById(R.id.b7);
+            button_8 = (Button) findViewById(R.id.b8);
+            button_9 = (Button) findViewById(R.id.b9);
+            button_Dot = (Button) findViewById(R.id.bdot);
+            button_Add = (Button) findViewById(R.id.badd);
+            button_Sub = (Button) findViewById(R.id.bsub);
+            button_Mul = (Button) findViewById(R.id.bmul);
+            button_Div = (Button) findViewById(R.id.bdiv);
+            button_Remainder = (Button) findViewById(R.id.bper);
+            button_Del = (Button) findViewById(R.id.bclr);
+            button_Equ = (Button) findViewById(R.id.bans);
+
+            edittext1 = (TextView) findViewById(R.id.dis);
+
+            button_1.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "1");
+                }
+            });
+
+            button_2.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "2");
+                }
+            });
+
+            button_3.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "3");
+                }
+            });
+
+            button_4.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "4");
+                }
+            });
+
+            button_5.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "5");
+                }
+            });
+
+            button_6.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "6");
+                }
+            });
+
+            button_7.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "7");
+                }
+            });
+
+            button_8.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "8");
+                }
+            });
+
+            button_9.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "9");
+                }
+            });
+
+            button_0.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText(edittext1.getText() + "0");
+                }
+            });
+
+            button_Add.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(edittext1.getText().length() != 0){
+                        in1 = Float.parseFloat(edittext1.getText() + "");
+                        Add = true;
+                        deci = false;
+                        edittext1.setText(null);
+                    }
+                }
+            });
+
+            button_Sub.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(edittext1.getText().length() != 0){
+                        in1 = Float.parseFloat(edittext1.getText() + "");
+                        Sub = true;
+                        deci = false;
+                        edittext1.setText(null);
+                    }
+                }
+            });
+
+            button_Mul.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(edittext1.getText().length() != 0){
+                        in1 = Float.parseFloat(edittext1.getText() + "");
+                        Multiply = true;
+                        deci = false;
+                        edittext1.setText(null);
+                    }
+                }
+            });
+
+            button_Div.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(edittext1.getText().length() != 0){
+                        in1 = Float.parseFloat(edittext1.getText() + "");
+                        Divide = true;
+                        deci = false;
+                        edittext1.setText(null);
+                    }
+                }
+            });
+
+            button_Remainder.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(edittext1.getText().length() != 0){
+                        in1 = Float.parseFloat(edittext1.getText() + "");
+                        Remainder = true;
+                        deci = false;
+                        edittext1.setText(null);
+                    }
+                }
+            });
+
+            button_Equ.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(Add || Sub || Multiply || Divide || Remainder){
+                        i2 = Float.parseFloat(edittext1.getText() + "");
+                    }
+                    if(Add){
+                        edittext1.setText(in1 + i2 + "");
+                        Add = false;
+                    }
+                    if(Sub){
+                        edittext1.setText(in1 - i2 + "");
+                        Sub = false;
+                    }
+                    if(Multiply){
+                        edittext1.setText(in1 * i2 + "");
+                        Multiply = false;
+                    }
+                    if(Divide){
+                        edittext1.setText(in1 / i2 + "");
+                        Divide = false;
+                    }
+                    if(Remainder){
+                        edittext1.setText(in1 % i2 + "");
+                        Remainder = false;
+                    }
+                }
+            });
+
+            button_Del.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    edittext1.setText("");
+                    in1 = 0.0;
+                    i2 = 0.0;
+                }
+            });
+
+            button_Dot.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(deci){
+                        //do nothing or you can show the error
+                    } else {
+                        edittext1.setText(edittext1.getText() + ".");
+                        deci = true;
+                    }
+                }
+            });
+        }
+}
+
+------------------------------------------------
+Program 3 - SignUp Login
+------------------------------------------------
+Signup.java
+--------------------
+package com.example.program3;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    EditText txtUsername;
+    EditText txtPassword;
+    Button btnSignup;
+    String regularExpression ="^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!])[A-Za-z\\d@$!]{8,}$";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        txtUsername=(EditText)findViewById(R.id.txt_username);
+        txtPassword=(EditText)findViewById(R.id.txt_password);
+        btnSignup=(Button)findViewById(R.id.btn_signup);
+        btnSignup.setOnClickListener(this);
+    }
+    public void onClick(View v)
+    {
+        String username=txtUsername.getText().toString(); String
+            password=txtPassword.getText().toString();
+        if(validatePassword(password)) {
+            Bundle bundle = new Bundle();
+            bundle.putString("user", username);
+            bundle.putString("pass", password);
+            Intent it = new Intent(this, LoginActivity.class);
+            it.putExtra("data", bundle);
+            startActivity(it);
+        }
+        else
+        {
+            Toast.makeText(getBaseContext(),
+                    "Invalid Password",
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+    public boolean validatePassword(String password) {
+        Pattern pattern= Pattern.compile(regularExpression);
+        Matcher matcher=pattern.matcher(password); return
+                matcher.matches();
+    }
+}
+
+Login.java
+----------------
+package com.example.program3;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+
+    EditText txtLoginUsername;
+    EditText txtLoginPassword;
+    Button btnLogin;
+    String user,pass;
+    int count=0;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        txtLoginUsername=(EditText)
+                findViewById(R.id.txt_login_username);
+        txtLoginPassword=(EditText)
+                findViewById(R.id.txt_login_password);
+        btnLogin=(Button)findViewById(R.id.btn_login_signin);
+        btnLogin.setOnClickListener(this);
+        Bundle bundle=getIntent().getBundleExtra("data");
+        user=bundle.getString("user");
+        pass=bundle.getString("pass");
+    }
+    public void onClick(View v)
+    {
+        String user1=txtLoginUsername.getText().toString();
+        String pass1=txtLoginPassword.getText().toString();
+        if(user.equals(user1)&&pass.equals(pass1)) {
+            Toast.makeText(this,"Login Successful"
+                    ,Toast.LENGTH_LONG).show(); }
+        else
+        {
+            count++;
+            if(count==3)
+            {
+                btnLogin.setEnabled(false);
+                Toast.makeText(this, "Failed Login Attempts"
+                        ,Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                Toast.makeText(this,"Login Failed "+count
+                        ,Toast.LENGTH_LONG).show(); }
+        }
+    }
+}
+
+-------------------------------------------------
+Program 4 - Wallpaper
+-------------------------------------------------
+package com.example.wallpaper;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.WallpaperManager;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MainActivity extends AppCompatActivity {
+    Button changeWallpaper;
+    Timer mytimer;
+    Drawable drawable;
+    WallpaperManager wpm;
+    int count = 1;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        mytimer = new Timer();
+        wpm = WallpaperManager.getInstance(this);
+        changeWallpaper = findViewById(R.id.button);
+        changeWallpaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { setWallpaper(); }
+        });
+    }
+    private void setWallpaper(){
+        mytimer.schedule(new TimerTask(){
+            @Override
+            public void run(){
+                if(count == 1){
+                    drawable = getResources().getDrawable(R.drawable.img1);
+                    count = 2;
+                }
+                else if(count == 2){
+                    drawable = getResources().getDrawable(R.drawable.img2);
+                    count = 3;
+                }
+                else if(count == 3){
+                    drawable = getResources().getDrawable(R.drawable.img3);
+                    count = 4;
+                }
+                else if(count == 4){
+                    drawable = getResources().getDrawable(R.drawable.img4);
+                    count = 5;
+                }
+                else if(count == 5){
+                    drawable = getResources().getDrawable(R.drawable.img5);
+                    count = 1;
+                }
+                Bitmap wallpaper = ((BitmapDrawable)drawable).getBitmap();
+                try{
+                    wpm.setBitmap(wallpaper);
+                }
+                catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        },0,3000);
+    }
+}
